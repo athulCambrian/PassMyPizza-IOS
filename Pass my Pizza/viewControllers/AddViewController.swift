@@ -15,16 +15,17 @@ class AddViewController: UIViewController {
     @IBOutlet weak var thickBtn:UIButton!
     
     @IBOutlet weak var price:UILabel!
-    let price_val=15.0;
-  
+    var price_val=15.0;
+    let THICK_CRUST_PRICE=2.50
+    let LARGE_PIZZA_PRICE=3.50
     @IBAction func thinAction(){
         thinBtn.setTitle("Thin", for: .normal)
         thinBtn.setTitleColor(.blue, for: .normal)
         
         thickBtn.setTitle("Thick", for: .normal)
         thickBtn.setTitleColor(.lightGray, for: .normal)
-        
-        
+        price_val=price_val-THICK_CRUST_PRICE
+        setPrice(price:price_val);
     }
     @IBAction func thickAction(){
         thinBtn.setTitle("Thin", for: .normal)
@@ -32,8 +33,9 @@ class AddViewController: UIViewController {
         
         thickBtn.setTitle("Thick", for: .normal)
         thickBtn.setTitleColor(.blue, for: .normal)
-        
-        
+        price_val=price_val+THICK_CRUST_PRICE
+        setPrice(price:price_val);
+      
     }
     
     @IBAction func smallBtnAction(){
@@ -42,6 +44,8 @@ class AddViewController: UIViewController {
         
         largeBtn.setTitle("Large", for: .normal)
         largeBtn.setTitleColor(.lightGray, for: .normal)
+        price_val=price_val-LARGE_PIZZA_PRICE
+        setPrice(price:price_val);
     }
     @IBAction func largeBtnAction(){
         smallBtn.setTitle("Small", for: .normal)
@@ -49,6 +53,8 @@ class AddViewController: UIViewController {
         
         largeBtn.setTitle("Large", for: .normal)
         largeBtn.setTitleColor(.blue, for: .normal)
+        price_val=price_val+LARGE_PIZZA_PRICE
+        setPrice(price:price_val);
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +62,8 @@ class AddViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
- 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setPrice(price:Double){
+        self.price.text="$ "+String(price_val)
     }
-    */
 
 }
