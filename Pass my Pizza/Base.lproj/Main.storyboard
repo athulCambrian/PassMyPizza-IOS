@@ -121,9 +121,123 @@
                     <view key="view" contentMode="scaleToFill" id="fJJ-f2-6ZI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build your Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lq-gu-MRR">
+                                <rect key="frame" x="99.5" y="64" width="215" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <color key="textColor" red="0.95360824740000005" green="0.45401029269999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Pizza Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-fc-Tti">
+                                <rect key="frame" x="20" y="117.5" width="137.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni2-9Q-eoy">
+                                <rect key="frame" x="20" y="148" width="374" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-md-bCO">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Small">
+                                            <color key="baseForegroundColor" systemColor="systemGray2Color"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="smallBtnAction" destination="zK5-Wc-iAu" eventType="touchUpInside" id="fUU-LM-IPh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb8-N3-2vh">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Large">
+                                            <color key="baseForegroundColor" systemColor="systemGray2Color"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="largeBtnAction" destination="zK5-Wc-iAu" eventType="touchUpInside" id="xNo-p6-NeH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ax-iz-tch">
+                                <rect key="frame" x="20" y="239.5" width="374" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTm-cg-jti">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Thin">
+                                            <color key="baseForegroundColor" systemColor="systemGray2Color"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="thinAction" destination="zK5-Wc-iAu" eventType="touchUpInside" id="m4a-IT-B9Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fA-sa-I5j">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Thick">
+                                            <color key="baseForegroundColor" systemColor="systemGray2Color"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="thickAction" destination="zK5-Wc-iAu" eventType="touchUpInside" id="eSF-7h-TEK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Crust Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrM-yH-Svs">
+                                <rect key="frame" x="20" y="199" width="145" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zlg-Op-TN1">
+                                <rect key="frame" x="20" y="811" width="374" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$589.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOy-nc-bJA">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="31"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87b-kD-uy6">
+                                        <rect key="frame" x="224" y="0.0" width="150" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="zhx-O2-Ts1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="ADD"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PZp-Pa-vTc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ni2-9Q-eoy" firstAttribute="top" secondItem="h6b-fc-Tti" secondAttribute="bottom" constant="10" id="4n5-E1-wYK"/>
+                            <constraint firstItem="h6b-fc-Tti" firstAttribute="leading" secondItem="PZp-Pa-vTc" secondAttribute="leading" constant="20" id="5Nc-Gr-XS8"/>
+                            <constraint firstItem="0Lq-gu-MRR" firstAttribute="centerX" secondItem="fJJ-f2-6ZI" secondAttribute="centerX" id="9WA-cL-Chu"/>
+                            <constraint firstItem="zlg-Op-TN1" firstAttribute="leading" secondItem="PZp-Pa-vTc" secondAttribute="leading" constant="20" id="DTM-Ur-LMv"/>
+                            <constraint firstItem="PZp-Pa-vTc" firstAttribute="trailing" secondItem="zlg-Op-TN1" secondAttribute="trailing" constant="20" id="Hyo-cK-nck"/>
+                            <constraint firstItem="PZp-Pa-vTc" firstAttribute="trailing" secondItem="3ax-iz-tch" secondAttribute="trailing" constant="20" id="MR2-wx-W9i"/>
+                            <constraint firstItem="PZp-Pa-vTc" firstAttribute="bottom" secondItem="zlg-Op-TN1" secondAttribute="bottom" constant="20" id="UUg-CH-BjR"/>
+                            <constraint firstItem="JrM-yH-Svs" firstAttribute="leading" secondItem="PZp-Pa-vTc" secondAttribute="leading" constant="20" id="bsz-Pe-gHm"/>
+                            <constraint firstItem="3ax-iz-tch" firstAttribute="top" secondItem="JrM-yH-Svs" secondAttribute="bottom" constant="20" id="cMu-BX-fxH"/>
+                            <constraint firstItem="3ax-iz-tch" firstAttribute="leading" secondItem="PZp-Pa-vTc" secondAttribute="leading" constant="20" id="emg-Kg-yxf"/>
+                            <constraint firstItem="h6b-fc-Tti" firstAttribute="top" secondItem="0Lq-gu-MRR" secondAttribute="bottom" constant="20" id="frL-hg-WH1"/>
+                            <constraint firstItem="PZp-Pa-vTc" firstAttribute="trailing" secondItem="ni2-9Q-eoy" secondAttribute="trailing" constant="20" id="sLb-Z0-0r4"/>
+                            <constraint firstItem="0Lq-gu-MRR" firstAttribute="top" secondItem="PZp-Pa-vTc" secondAttribute="top" constant="20" id="tyU-Gc-QZl"/>
+                            <constraint firstItem="JrM-yH-Svs" firstAttribute="top" secondItem="ni2-9Q-eoy" secondAttribute="bottom" constant="20" id="xeY-X9-Vd4"/>
+                            <constraint firstItem="ni2-9Q-eoy" firstAttribute="leading" secondItem="PZp-Pa-vTc" secondAttribute="leading" constant="20" id="z4P-Hz-yck"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="largeBtn" destination="Tb8-N3-2vh" id="h5y-PU-bgL"/>
+                        <outlet property="price" destination="tOy-nc-bJA" id="tn0-Go-ow2"/>
+                        <outlet property="smallBtn" destination="HRm-md-bCO" id="CDe-qz-HG0"/>
+                        <outlet property="thickBtn" destination="6fA-sa-I5j" id="Mb8-fl-GsE"/>
+                        <outlet property="thinBtn" destination="cTm-cg-jti" id="ON6-87-yIg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKM-32-p6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,6 +248,9 @@
         <image name="pizza_image" width="1000" height="1000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
