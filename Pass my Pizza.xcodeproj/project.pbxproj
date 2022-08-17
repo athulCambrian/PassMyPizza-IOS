@@ -16,6 +16,8 @@
 		DA84E9D328ACAD8300696697 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA84E9D128ACAD8300696697 /* LaunchScreen.storyboard */; };
 		DA84E9DD28ACEF5100696697 /* PizzaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA84E9DC28ACEF5100696697 /* PizzaTableViewCell.swift */; };
 		DA84E9E128ACF65700696697 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA84E9E028ACF65700696697 /* AddViewController.swift */; };
+		DA84E9EB28AD488700696697 /* PizzaItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA84E9E928AD488700696697 /* PizzaItem+CoreDataClass.swift */; };
+		DA84E9EC28AD488700696697 /* PizzaItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA84E9EA28AD488700696697 /* PizzaItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		DA84E9D428ACAD8300696697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA84E9DC28ACEF5100696697 /* PizzaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTableViewCell.swift; sourceTree = "<group>"; };
 		DA84E9E028ACF65700696697 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		DA84E9E928AD488700696697 /* PizzaItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PizzaItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DA84E9EA28AD488700696697 /* PizzaItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PizzaItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		DA84E9C228ACAD8100696697 /* Pass my Pizza */ = {
 			isa = PBXGroup;
 			children = (
+				DA84E9E228AD39AF00696697 /* Models */,
 				DA84E9DB28ACEF2700696697 /* TableViewCellClass */,
 				DA84E9DA28ACB92A00696697 /* viewControllers */,
 				DA84E9C328ACAD8100696697 /* AppDelegate.swift */,
@@ -90,6 +95,15 @@
 				DA84E9DC28ACEF5100696697 /* PizzaTableViewCell.swift */,
 			);
 			path = TableViewCellClass;
+			sourceTree = "<group>";
+		};
+		DA84E9E228AD39AF00696697 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA84E9E928AD488700696697 /* PizzaItem+CoreDataClass.swift */,
+				DA84E9EA28AD488700696697 /* PizzaItem+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA84E9EB28AD488700696697 /* PizzaItem+CoreDataClass.swift in Sources */,
+				DA84E9EC28AD488700696697 /* PizzaItem+CoreDataProperties.swift in Sources */,
 				DA84E9C828ACAD8100696697 /* ViewController.swift in Sources */,
 				DA84E9C428ACAD8100696697 /* AppDelegate.swift in Sources */,
 				DA84E9E128ACF65700696697 /* AddViewController.swift in Sources */,

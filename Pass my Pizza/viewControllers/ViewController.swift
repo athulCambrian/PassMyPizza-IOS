@@ -16,37 +16,36 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let viewControl=storyboard?.instantiateViewController(withIdentifier: "add_vc") as! AddViewController
         present(viewControl,animated: true)
     }
-    
-    struct pizzaModel{
-        let pizzaName:String
-        let price:String
-    }
-    let data :[pizzaModel]=[
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
-    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc")
-    ]
+    let context=(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+ 
+    var data:[PizzaItem]?
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource=self
         table.delegate=self
+        getDataFromDb();
     }
-
+    func getDataFromDb(){
+        do{
+            self.data =   try context.fetch(PizzaItem.fetchRequest())
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+           
+        }catch{
+            
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return data.count
+        return self.data?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let pizza=data[indexPath.row]
+        let pizza = self.data![indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for :indexPath)as! PizzaTableViewCell
-        cell.pizzaName.text=pizza.pizzaName
+        cell.pizzaName?.text=pizza.name
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

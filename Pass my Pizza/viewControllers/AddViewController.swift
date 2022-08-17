@@ -15,6 +15,9 @@ class AddViewController: UIViewController {
     @IBOutlet weak var thickBtn:UIButton!
     
     @IBOutlet weak var price:UILabel!
+    
+    @IBOutlet weak var buyNowBtn:UIButton!
+    
     var price_val=15.0;
     let THICK_CRUST_PRICE=2.50
     let LARGE_PIZZA_PRICE=3.50
@@ -64,6 +67,10 @@ class AddViewController: UIViewController {
     
     func setPrice(price:Double){
         self.price.text="$ "+String(price_val)
+    }
+    
+    @IBAction func buyNowAction(){
+      
     }
 
 }

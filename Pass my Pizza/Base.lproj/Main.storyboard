@@ -206,6 +206,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="BUT NOW"/>
+                                        <connections>
+                                            <action selector="buyNowAction" destination="zK5-Wc-iAu" eventType="touchUpInside" id="op4-Uj-Xa3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -292,6 +295,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyNowBtn" destination="87b-kD-uy6" id="Bmf-kv-kcC"/>
                         <outlet property="largeBtn" destination="Tb8-N3-2vh" id="h5y-PU-bgL"/>
                         <outlet property="price" destination="tOy-nc-bJA" id="tn0-Go-ow2"/>
                         <outlet property="smallBtn" destination="HRm-md-bCO" id="CDe-qz-HG0"/>
