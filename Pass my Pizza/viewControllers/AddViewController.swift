@@ -1,5 +1,5 @@
 //
-//  addScreenViewController.swift
+//  AddViewController.swift
 //  Pass my Pizza
 //
 //  Created by Athul Babu on 2022-08-17.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class addScreenViewController: UIViewController {
+class AddViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

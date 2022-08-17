@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="zEn-d6-gHQ">
             <objects>
-                <viewController id="zK5-Wc-iAu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="add_vc" id="zK5-Wc-iAu" customClass="AddViewController" customModule="Pass_my_Pizza" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fJJ-f2-6ZI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

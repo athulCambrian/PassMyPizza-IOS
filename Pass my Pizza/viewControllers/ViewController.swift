@@ -13,7 +13,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 
     @IBOutlet weak var table:UITableView!
     @IBAction func createPizzaButtonClick(){
-        
+        let viewControl=storyboard?.instantiateViewController(withIdentifier: "add_vc") as! AddViewController
+        present(viewControl,animated: true)
     }
     
     struct pizzaModel{
