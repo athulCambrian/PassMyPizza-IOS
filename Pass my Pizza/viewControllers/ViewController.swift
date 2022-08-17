@@ -14,7 +14,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @IBOutlet weak var table:UITableView!
     @IBAction func createPizzaButtonClick(){
         let viewControl=storyboard?.instantiateViewController(withIdentifier: "add_vc") as! AddViewController
-        present(viewControl,animated: true)
+      
+        navigationController?.pushViewController(viewControl, animated: true)
     }
     let context=(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
  
@@ -25,6 +26,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         super.viewDidLoad()
         table.dataSource=self
         table.delegate=self
+        getDataFromDb();
+    }
+    override func viewWillAppear(_ animated:Bool) {
+        super.viewWillAppear(animated)
+      
         getDataFromDb();
     }
     func getDataFromDb(){
@@ -46,6 +52,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let pizza = self.data![indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for :indexPath)as! PizzaTableViewCell
         cell.pizzaName?.text=pizza.name
+        cell.price?.text="$"+String(pizza.price)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

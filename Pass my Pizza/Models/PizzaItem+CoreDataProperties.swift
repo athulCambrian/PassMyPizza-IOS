@@ -17,7 +17,7 @@ extension PizzaItem {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var price: Int64
+    @NSManaged public var price: Double
     @NSManaged public var topings: [String]?
     @NSManaged public var size: String?
     @NSManaged public var crust: String?
