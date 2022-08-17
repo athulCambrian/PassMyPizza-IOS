@@ -39,27 +39,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R50-Ue-baN">
-                                <rect key="frame" x="20" y="230.5" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="zzM-Hs-wIS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSE-43-wsK">
-                                <rect key="frame" x="20" y="300.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="240.5" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jtP-S3-KSA"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create Pizza"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Your Custom Pizza"/>
                                 <connections>
                                     <action selector="createPizzaButtonClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWR-LH-vKz"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zIw-UC-aeE">
-                                <rect key="frame" x="20" y="370.5" width="374" height="471.5"/>
+                                <rect key="frame" x="20" y="310.5" width="374" height="531.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="RPc-mc-nho" customClass="PizzaTableViewCell" customModule="Pass_my_Pizza" customModuleProvider="target">
@@ -113,16 +105,13 @@
                         <color key="backgroundColor" red="0.95360824742268036" green="0.45401029268411636" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nSE-43-wsK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0HM-6M-dDI"/>
-                            <constraint firstItem="R50-Ue-baN" firstAttribute="top" secondItem="CMv-4y-WYx" secondAttribute="bottom" constant="10" id="1uN-Ow-LgK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R50-Ue-baN" secondAttribute="trailing" constant="20" id="9Xa-1W-Uf8"/>
                             <constraint firstItem="CMv-4y-WYx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dc2-al-TW9"/>
-                            <constraint firstItem="R50-Ue-baN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GVn-ib-48b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nSE-43-wsK" secondAttribute="trailing" constant="20" id="NF1-fL-rfo"/>
-                            <constraint firstItem="nSE-43-wsK" firstAttribute="top" secondItem="R50-Ue-baN" secondAttribute="bottom" constant="20" id="RYJ-dO-aw6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zIw-UC-aeE" secondAttribute="trailing" constant="20" id="SqF-d4-S0l"/>
                             <constraint firstItem="zIw-UC-aeE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TsQ-Kh-CXz"/>
                             <constraint firstItem="CMv-4y-WYx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XF6-w3-2NK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zIw-UC-aeE" secondAttribute="bottom" constant="20" id="Xkk-eA-mBF"/>
+                            <constraint firstItem="nSE-43-wsK" firstAttribute="top" secondItem="CMv-4y-WYx" secondAttribute="bottom" constant="20" id="cJ3-vh-D3Q"/>
                             <constraint firstItem="zIw-UC-aeE" firstAttribute="top" secondItem="nSE-43-wsK" secondAttribute="bottom" constant="20" id="d1H-fq-hAb"/>
                         </constraints>
                     </view>

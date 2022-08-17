@@ -55,6 +55,19 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         cell.price?.text="$"+String(pizza.price)
         return cell
     }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete"){
+            (action,view,completionHandler) in
+            
+            let pizzaRemoved=self.data![indexPath.row]
+            self.context.delete(pizzaRemoved)
+            do{
+              try  self.context.save()}catch{}
+            self.getDataFromDb()
+            
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
