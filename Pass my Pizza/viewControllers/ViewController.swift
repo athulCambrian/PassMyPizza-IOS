@@ -7,13 +7,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+ 
+    
 
+    @IBOutlet weak var table:UITableView!
+    @IBAction func createPizzaButtonClick(){
+        
+    }
+    
+    struct pizzaModel{
+        let pizzaName:String
+        let price:String
+    }
+    let data :[pizzaModel]=[
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc"),
+    pizzaModel(pizzaName:"dcsdv" , price: "sacsdc")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        table.dataSource=self
+        table.delegate=self
     }
 
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let pizza=data[indexPath.row]
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for :indexPath)as! PizzaTableViewCell
+        cell.pizzaName.text=pizza.pizzaName
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
 }
 
