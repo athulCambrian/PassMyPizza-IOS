@@ -270,6 +270,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xb-d6-8ML">
                                         <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onionSwitch:" destination="zK5-Wc-iAu" eventType="valueChanged" id="umC-Us-dk5"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -284,6 +287,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYe-Sd-Ymp">
                                         <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="brocolliSwitch:" destination="zK5-Wc-iAu" eventType="valueChanged" id="qey-X5-xwy"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>

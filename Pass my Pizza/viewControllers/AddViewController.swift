@@ -16,11 +16,14 @@ class AddViewController: UIViewController {
     
     @IBOutlet weak var price:UILabel!
     
+   
     @IBOutlet weak var buyNowBtn:UIButton!
     var toping:String="Tomato"
     var main:String="Chiken"
     var size:String="small"
     var crust:String="thin"
+    var topingArray = [String]()
+
     var price_val=15.0;
     let THICK_CRUST_PRICE=2.50
     let LARGE_PIZZA_PRICE=3.50
@@ -66,6 +69,8 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.price.text="$ "+String(price_val)
+        topingArray.append("Onions")
+        topingArray.append("Brocolli")
         // Do any additional setup after loading the view.
     }
     
@@ -87,16 +92,46 @@ class AddViewController: UIViewController {
             main="Mushroom"
         }
     }
-    
+    @IBAction func onionSwitch(_ sender:UISwitch){
+        if sender.isOn==true{
+            topingArray.append("Onions")
+        }else{
+            topingArray.remove(at: 0)
+        }
+    }
+    @IBAction func brocolliSwitch(_ sender:UISwitch){
+        if sender.isOn==true{
+            topingArray.append("Brocolli")
+        }else{
+            topingArray.remove(at: 0)
+        }
+    }
     @IBAction func buyNowAction(){
       let newPizza = PizzaItem(context: context)
         newPizza.name=main+" Pizza with "+toping+" Sauce"
         newPizza.price=price_val
         newPizza.size=size
         newPizza.crust=crust
-        newPizza.topings=["dzc","dvsd"]
+        newPizza.topings=topingArray
         do{
            try self.context.save()
+            let alert = UIAlertController(title: "Success", message: "Order Placed Succesfully", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                    case .default:
+                    print("default")
+                    
+                    case .cancel:
+                    print("cancel")
+                    
+                    case .destructive:
+                    print("destructive")
+                    
+                @unknown default:
+                    print("error")
+                }
+            }))
+            self.present(alert, animated: true, completion: nil)
             
         }catch{
             
